@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Nutrient Information</h2>
+    <p>Fruit/Vegetable Name: {{ fruit.name }}</p>
+    <h3>Nutrients</h3>
+    <ul>
+        {% if fruit.vitamin_c %}
+            <li>Vitamin C: {{ fruit.vitamin_c }}</li>
+        {% endif %}
+        {% if fruit.fiber %}
+            <li>Fiber: {{ fruit.fiber }}</li>
+        {% endif %}
+        {% if fruit.sugar %}
+            <li>Sugar: {{ fruit.sugar }}</li>
+        {% endif %}
+        {% if fruit.calories %}
+            <li>Calories: {{ fruit.calories }}</li>
+        {% endif %}
+        {% if fruit.protein %}<li>Protein: {{ fruit.protein }}</li>{% endif %}
+        {% if fruit.fat %}<li>Fat: {{ fruit.fat }}</li>{% endif %}
+        {% if fruit.carbohydrates %}<li>Carbohydrates: {{ fruit.carbohydrates }}</li>{% endif %}
+        {% if fruit.potassium %}<li>Potassium: {{ fruit.potassium }}</li>{% endif %}
+        {% if fruit.magnesium %}<li>Magnesium: {{ fruit.magnesium }}</li>{% endif %}
+        {% if fruit.calcium %}<li>Calcium: {{ fruit.calcium }}</li>{% endif %}
+        {% if fruit.iron %}<li>Iron: {{ fruit.iron }}</li>{% endif %}
+        {% if fruit.vitamin_a %}<li>Vitamin A: {{ fruit.vitamin_a }}</li>{% endif %}
+        {% if fruit.vitamin_d %}<li>Vitamin D: {{ fruit.vitamin_d }}</li>{% endif %}
+        {% if fruit.vitamin_b6 %}<li>Vitamin B6: {{ fruit.vitamin_b6 }}</li>{% endif %}
+        {% if fruit.vitamin_b12 %}<li>Vitamin B12: {{ fruit.vitamin_b12 }}</li>{% endif %}
+    </ul>
+{% endblock %}

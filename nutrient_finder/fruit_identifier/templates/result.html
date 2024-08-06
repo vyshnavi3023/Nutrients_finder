@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Upload Result</h2>
+    <p>Fruit/Vegetable Name: {{ fruit_image.name }}</p>
+    <h3>Nutrients</h3>
+    <ul>
+        {% if fruit_image.vitamin_c %}
+            <li>Vitamin C: {{ fruit_image.vitamin_c }}</li>
+        {% endif %}
+        {% if fruit_image.fiber %}
+            <li>Fiber: {{ fruit_image.fiber }}</li>
+        {% endif %}
+        {% if fruit_image.sugar %}
+            <li>Sugar: {{ fruit_image.sugar }}</li>
+        {% endif %}
+        {% if fruit_image.calories %}
+            <li>Calories: {{ fruit_image.calories }}</li>
+        {% endif %}
+        {% if fruit_image.protein %}
+            <li>Protein: {{ fruit_image.protein }}</li>
+        {% endif %}
+        {% if fruit_image.fat %}
+            <li>Fat: {{ fruit_image.fat }}</li>
+        {% endif %}
+        {% if fruit_image.carbohydrates %}
+            <li>Carbohydrates: {{ fruit_image.carbohydrates }}</li>
+        {% endif %}
+        {% if fruit_image.potassium %}
+            <li>Potassium: {{ fruit_image.potassium }}</li>
+        {% endif %}
+        {% if fruit_image.magnesium %}
+            <li>Magnesium: {{ fruit_image.magnesium }}</li>
+        {% endif %}
+        {% if fruit_image.calcium %}
+            <li>Calcium: {{ fruit_image.calcium }}</li>
+        {% endif %}
+        {% if fruit_image.iron %}
+            <li>Iron: {{ fruit_image.iron }}</li>
+        {% endif %}
+        {% if fruit_image.vitamin_a %}
+            <li>Vitamin A: {{ fruit_image.vitamin_a }}</li>
+        {% endif %}
+        {% if fruit_image.vitamin_d %}
+            <li>Vitamin D: {{ fruit_image.vitamin_d }}</li>
+        {% endif %}
+        {% if fruit_image.vitamin_b6 %}
+            <li>Vitamin B6: {{ fruit_image.vitamin_b6 }}</li>
+        {% endif %}
+        {% if fruit_image.vitamin_b12 %}
+            <li>Vitamin B12: {{ fruit_image.vitamin_b12 }}</li>
+        {% endif %}
+    </ul>
+{% endblock %}

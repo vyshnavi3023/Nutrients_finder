@@ -1,0 +1,51 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0044cc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1rem;
+}
+
+h1, h2 {
+    color: #0044cc;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #003399;
+}
+
+.error {
+    color: red;
+}
