@@ -1,4 +1,1 @@
 pip install django
-django-admin startproject nutrient_finder
-cd nutrient_finder
-django-admin startapp fruit_identifier
