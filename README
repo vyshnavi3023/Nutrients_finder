@@ -1,1 +1,11 @@
+python -m venv venv
+source venv/bin/activate
+pip install Django djangorestframework  
 pip install django
+python manage.py migrate
+python manage.py createsuperuser
+# setup username and password
+
+#runserver
+
+python manage.py runserver
