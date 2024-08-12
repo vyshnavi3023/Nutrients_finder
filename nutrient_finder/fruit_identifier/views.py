@@ -130,7 +130,7 @@ def get_gpt_response(prompt):
         return response['choices'][0]['message']['content'].strip()
     except Exception as e:
         return f"Error: {str(e)}"
-"""    
+   
 def search_nutrients(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)
@@ -144,7 +144,7 @@ def search_nutrients(request):
     else:
         form = SearchForm()
     return render(request, 'search.html', {'form': form})
-
+""" 
 def upload_image(request):
     if request.method == 'POST':
         form = FruitImageForm(request.POST, request.FILES)
