@@ -21,7 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-wfi4^j$b1$@wjb)z)(tpx@94(tbs4dbm0s5b=43e$t!#(@2sa_"
+OPENAI_API_KEY = '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'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+OCR_SPACE_API_KEY = 'k82656933288957'
+# Set the environment variable
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/skondra/Documents/Nutrients_finder/nutrient_finder/fruit_identifier/static/brave-embassy-431922-h5-382d4768f9bd.json"
 
+# Use the environment variable
+GOOGLE_APPLICATION_CREDENTIALS = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+GOOGLE_API_KEY ='AIzaSyDBhrpd8Fv0i9WZXWx4wXf_E7-egjmWT_o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -38,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "fruit_identifier",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -48,7 +58,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "nutrient_finder.urls"
 
@@ -117,7 +129,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'fruit_identifier', 'static'),
+]
 
 
 # Default primary key field type
